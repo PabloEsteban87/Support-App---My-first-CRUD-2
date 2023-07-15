@@ -1,1 +1,18 @@
-<p>requestsupport works!</p>
+<div class="container-form">
+    <form formGroup="AddSupportForm" class="formulario" (ngSubmit) = "onSubmitForm()">
+        <label for="name">Nombre:</label><br>
+        <input formControlName="name" type="text" id="name" name="name" value=""><br>
+        <label for="date">Fecha:</label><br>
+        <input formControlName="date" type="text" id="date" name="date" value=""><br>
+        <label for="topic">Tema:</label><br>
+        <input formControlName="topic" type="text" id="topic" name="topic" value=""><br><br>
+        <label for="description">Descripción:</label><br>
+        <textarea formControlName="description" id="description" name="description" rows="10" cols="30">
+        </textarea><br><br>
+
+            <input class="reset" type="reset" value="reset">
+            <input (click)="onSubmitForm()" class="validar" type="" value="Validar"><br><br>
+            <input class="atras" type="" value="Atrás">
+           
+</form>
+</div>
