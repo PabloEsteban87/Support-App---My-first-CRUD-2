@@ -1,5 +1,5 @@
 <div class="container-form">
-    <form formGroup="AddSupportForm" class="formulario" (ngSubmit) = "onSubmitForm()">
+    <form formGroup="AddSupportForm"  #form1="ngForm" (ngSubmit)="onSubmit(form1)" class="formulario" (ngSubmit) = "onSubmitForm(form1)">
         <label for="name">Nombre:</label><br>
         <input formControlName="name" type="text" id="name" name="name" value=""><br>
         <label for="date">Fecha:</label><br>
