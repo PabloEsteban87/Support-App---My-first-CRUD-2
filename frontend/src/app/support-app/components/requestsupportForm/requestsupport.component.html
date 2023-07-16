@@ -1,18 +1,18 @@
 <div class="container-form">
     <form [formGroup]="AddSupportForm" class="formulario" (submit)="onSubmitForm();">
-        <label for="name">Nombre:</label><br>
+        <label for="name">Nombre:</label>
         <input formControlName="name" type="text"><br>
-        <label for="date">Fecha:</label><br>
+        <label for="date">Fecha:</label>
         <input formControlName="date" type="text"><br>
-        <label for="topic">Tema:</label><br>
+        <label for="topic">Tema:</label>
         <input formControlName="topic" type="text"><br><br>
-        <label for="description">Descripción:</label><br>
-        <textarea formControlName="description" rows="10" cols="30">
+        <label class="ordenado" for="description">Descripción:</label><br>
+        <textarea class="ordenado" formControlName="description" rows="10" cols="30">
         </textarea><br><br>
-
+<div class="botones">
             <input class="reset" type="reset" value="reset">
             <button class="validar" type="submit">Validar</button><br><br>
             <input class="atras" type="" value="Atrás">
-           
+        </div>
 </form>
 </div>
