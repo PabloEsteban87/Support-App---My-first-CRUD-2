@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, NgForm, ReactiveFormsModule, FormGroup, FormControl, FormsModule, Form } from '@angular/forms';
+
 
 @Component({
   selector: 'app-requestsupport',
@@ -10,26 +10,30 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class RequestsupportComponent implements OnInit{
 
-  constructor(/* private http: HttpClient */){}
+  constructor( private http: HttpClient){}
 
-  AddSupportForm!: ;
 
- /*  AddSupportForm = new FormGroup({
-    name : new FormControl(""),
-    date : new FormControl(""),
-    topic : new FormControl(""),
-    description : new FormControl("")
-  }); */
+AddSupportForm!: FormGroup; 
 
-  ngOnInit(): void {}
-  
-  onSubmitForm(){
-    /* this.addSupport(); */
-    console.log("hola");
-    console.log(this.AddSupportForm.value);
+
+  ngOnInit(){
+   this.AddSupportForm = new FormGroup({
+    name1: new FormControl(),
+    date: new FormControl(),
+    topic: new FormControl(),
+    description: new FormControl(),
+   });
   }
 
-/*   addSupport(){
+
+  
+  onSubmitForm(){
+    console.log("hola");
+    console.log(this.AddSupportForm.get('name1')?.value);
+    this.addSupport();
+  }
+
+   addSupport(){
     this.http.post<any[]>('http://localhost:8000/support', {title: 'Angular post request'})
     .subscribe(createSupport => 
       {
@@ -37,6 +41,6 @@ export class RequestsupportComponent implements OnInit{
           console.log(this.AddSupportForm.value);
           console.log(createSupport);
       });
-  }  */
+  }  
 
 }

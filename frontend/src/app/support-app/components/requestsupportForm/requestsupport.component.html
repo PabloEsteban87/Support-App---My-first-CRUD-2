@@ -1,17 +1,17 @@
 <div class="container-form">
-    <form formGroup="AddSupportForm"  #form1="ngForm" (ngSubmit)="onSubmit(form1)" class="formulario" (ngSubmit) = "onSubmitForm(form1)">
+    <form [formGroup]="AddSupportForm" class="formulario" (submit)="onSubmitForm();">
         <label for="name">Nombre:</label><br>
-        <input formControlName="name" type="text" id="name" name="name" value=""><br>
+        <input formControlName="name1" type="text"><br>
         <label for="date">Fecha:</label><br>
-        <input formControlName="date" type="text" id="date" name="date" value=""><br>
+        <input formControlName="date" type="text"><br>
         <label for="topic">Tema:</label><br>
-        <input formControlName="topic" type="text" id="topic" name="topic" value=""><br><br>
+        <input formControlName="topic" type="text"><br><br>
         <label for="description">Descripción:</label><br>
-        <textarea formControlName="description" id="description" name="description" rows="10" cols="30">
+        <textarea formControlName="description" rows="10" cols="30">
         </textarea><br><br>
 
             <input class="reset" type="reset" value="reset">
-            <input (click)="onSubmitForm()" class="validar" type="" value="Validar"><br><br>
+            <button class="validar" type="submit">Validar</button><br><br>
             <input class="atras" type="" value="Atrás">
            
 </form>
