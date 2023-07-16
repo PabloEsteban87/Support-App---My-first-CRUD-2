@@ -18,7 +18,7 @@ AddSupportForm!: FormGroup;
 
   ngOnInit(): void {
    this.AddSupportForm = new FormGroup({
-    name1: new FormControl(),
+    name: new FormControl(),
     date: new FormControl(),
     topic: new FormControl(),
     description: new FormControl(),
@@ -29,17 +29,19 @@ AddSupportForm!: FormGroup;
   
   onSubmitForm(): void {
     console.log("hola");
-    console.log(this.AddSupportForm.get('name1')?.value);
+  /*   console.log(this.AddSupportForm.get('name1')?.value); */
     this.addSupport();
   }
 
    addSupport(): void {
-    this.http.post<any[]>('http://localhost:8000/support.json', this.AddSupportForm.value)
+    this.http.post<any[]>('http://localhost:8000/support', this.AddSupportForm.value)
     .subscribe(createSupport => 
       {
-         createSupport.push(this.AddSupportForm.value); 
+          
+        console.log("Añadido con exito");
+        /* console.log(createSupport);
           console.log(this.AddSupportForm.value);
-          console.log(createSupport);
+          console.log(createSupport); */
       });
   }  
 

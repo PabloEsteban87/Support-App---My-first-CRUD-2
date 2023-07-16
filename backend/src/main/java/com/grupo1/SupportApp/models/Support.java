@@ -10,7 +10,7 @@ public class Support {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "id_support")
     private Long id;
     
-    @Column(name = "name")
+    @Column(name = "name1")
     private String name;
 
     @Column(name = "date1")

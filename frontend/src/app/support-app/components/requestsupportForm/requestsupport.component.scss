@@ -1,3 +1,9 @@
+$phone:320px;
+$tablet:768px;
+$desktop:1024px;
+
+
+@media (min-width:$phone) and (max-width: $tablet){
 .container-form{
     display: flex;
     justify-content: center;
@@ -24,4 +30,12 @@ input{
     width:20%;
     text-align: center;
     padding: 5px;
+}
+
+}
+
+@media (min-width:$desktop) {
+
+
+
 }
