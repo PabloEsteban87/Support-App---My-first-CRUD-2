@@ -16,7 +16,7 @@ export class RequestsupportComponent implements OnInit{
 AddSupportForm!: FormGroup; 
 
 
-  ngOnInit(){
+  ngOnInit(): void {
    this.AddSupportForm = new FormGroup({
     name1: new FormControl(),
     date: new FormControl(),
@@ -27,14 +27,14 @@ AddSupportForm!: FormGroup;
 
 
   
-  onSubmitForm(){
+  onSubmitForm(): void {
     console.log("hola");
     console.log(this.AddSupportForm.get('name1')?.value);
     this.addSupport();
   }
 
-   addSupport(){
-    this.http.post<any[]>('http://localhost:8000/support', {title: 'Angular post request'})
+   addSupport(): void {
+    this.http.post<any[]>('http://localhost:8000/support.json', this.AddSupportForm.value)
     .subscribe(createSupport => 
       {
          createSupport.push(this.AddSupportForm.value); 

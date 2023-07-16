@@ -4,6 +4,7 @@ import com.grupo1.SupportApp.repositories.SupportRepository;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.grupo1.SupportApp.models.Support;
@@ -14,6 +15,7 @@ public class SupportService {
 
     SupportRepository repository;
 
+    @Autowired
     public SupportService(SupportRepository repository) {
         this.repository = repository;
     }

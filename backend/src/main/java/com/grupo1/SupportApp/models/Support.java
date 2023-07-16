@@ -13,7 +13,7 @@ public class Support {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "date")
+    @Column(name = "date1")
     private Date date;
 
     @Column(name = "topic")
