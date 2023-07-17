@@ -1,4 +1,32 @@
+$phone:320px;
+$tablet:768px;
+$desktop:1024px;
+
+
+@media (min-width:$phone) and (max-width: $tablet){
+
 .container_h1{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
     margin-bottom: 50px;
+    background-color: #FFEDDC;
+    height: 80px;
+}
+}
+
+
+
+@media (min-width:$desktop) {
+
+    .container_h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        background-color: #FFEDDC;
+        height: 120px;
+    }
 }

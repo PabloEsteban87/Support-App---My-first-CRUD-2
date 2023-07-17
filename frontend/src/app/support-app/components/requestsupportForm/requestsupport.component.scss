@@ -7,6 +7,8 @@ $desktop:1024px;
 .container-form{
     display: flex;
     justify-content: center;
+    background-color: #9CC7C7;
+    padding: 10px;
 }
 
 .formulario{
@@ -17,6 +19,11 @@ input{
     margin-bottom: 12%;
     width: 100%;
     margin-top: 5%;
+    background-color: #FFEDDC;
+}
+
+textarea{
+    background-color: #FFEDDC;
 }
 
 .reset{
@@ -27,12 +34,14 @@ input{
 
 .validar{
     padding: 5px;
+    background-color: #FFEDDC;
 }
 
 .atras{
     width:20%;
     text-align: center;
     padding: 5px;
+    background-color: #FFEDDC;
 }
 
 }
@@ -42,6 +51,9 @@ input{
     .container-form{
         display: flex;
         justify-content: center;
+        background-color: #9CC7C7;
+        padding: 10px;
+        height: 71vh;
     }
     
     .formulario{
@@ -51,6 +63,7 @@ input{
     input{
         margin-bottom: 12%;
         width: 200px;
+        background-color: #FFEDDC;
     }
 
     label{
@@ -68,6 +81,7 @@ input{
     
     .validar{
         padding: 5px;
+        background-color: #FFEDDC;
     }
     
     .atras{
@@ -87,6 +101,10 @@ input{
     .botones{
         display: block;
         text-align: center;
+    }
+
+    textarea{
+        background-color: #FFEDDC;
     }
     
     
