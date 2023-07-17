@@ -28,7 +28,6 @@ AddSupportForm!: FormGroup;
 
   
   onSubmitForm(): void {
-    console.log("hola");
   /*   console.log(this.AddSupportForm.get('name1')?.value); */
     this.addSupport();
   }
