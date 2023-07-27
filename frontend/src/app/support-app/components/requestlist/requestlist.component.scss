@@ -1,42 +1,79 @@
+$phone:320px;
+$tablet:768px;
+$desktop:1024px;
+
+.boton-soporte{
+    position: absolute;
+    bottom: 88px;
+}
+
+button{
+    color: blue;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
 .container {
-    display: grid;
-    width: 219.17vh;
-    height: 155.859vh;
-    // background: url(/frontend/src/assets/images/muestra_destokp.jpg);
-
-
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .header2 {
     display: flex;
-    margin: 0 auto;
-    margin-top: 4.56vh;
-    width: 201.369vh;
-    height: 13.39vh;
+    margin-top: 20px;
+    height: 120px;
     background: rgba(255, 237, 220, 1);
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .text {
     color: rgb(0, 0, 0);
-    font-size: 7.61vh;
+    font-size: 7vw;
 }
 
 .main {
     display: flex;
-    width: 201.36vh;
-    height: 102.58vh;
+    width: 100%;
+    height: 76vh;
     background: rgba(156, 199, 199, 1);
-    margin: 0 auto;
+    margin: 20px;
     justify-content: center;
-    // align-items: center;
 }
 
 .rlist {
+    font-size: 30px;
 
-    margin: 0 auto;
-    margin-top: 12.17vh;
-    font-size: 3.61vh;
+}
 
+
+
+@media (min-width:$phone) and (max-width: $tablet){
+    .text {
+        font-size: 20px;
+    }
+
+    .rlist {
+        font-size: 20px;
+    
+    }
+
+    .header2 {
+        height: 80px;
+    }
+}
+
+@media (min-width:$desktop) {
+    .text {
+        font-size: 42px;
+    }
+
+    .rlist {
+        font-size: 35px;
+    
+    }
 }

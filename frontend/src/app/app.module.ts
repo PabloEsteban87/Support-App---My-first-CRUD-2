@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {ReactiveFormsModule} from '@angular/forms';
+
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -16,7 +20,12 @@ import { RequesteditionviewComponent } from './support-app/views/requesteditionv
 import { RequestlistviewComponent } from './support-app/views/requestlistview/requestlistview.component';
 import { RequestsupportviewComponent } from './support-app/views/requestsupportview/requestsupportview.component';
 
-
+/* const routes: Routes = [
+  {path: '', component: RequestlistComponent},
+  {path: 'SupportAdd', component: RequestsupportviewComponent}, */
+/*   { path: "", redirectTo: "", pathMatch: "full" },
+  { path: "**", redirectTo: "" } */
+/* ]; */
 
 
 @NgModule({
@@ -38,7 +47,11 @@ import { RequestsupportviewComponent } from './support-app/views/requestsupportv
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule,
+/*     RouterModule.forRoot(routes) */
   ],
   providers: [],
   bootstrap: [AppComponent]
