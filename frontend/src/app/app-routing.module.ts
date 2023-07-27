@@ -5,6 +5,7 @@ import { RequestlistComponent } from './support-app/components/requestlist/reque
 
 const routes: Routes = [
   {path: '', component: RequestlistComponent},
+  {path: 'header', component: RequestlistComponent},
   {path: 'SupportAdd', component: RequestsupportviewComponent},
 /*   { path: "", redirectTo: "", pathMatch: "full" },
   { path: "**", redirectTo: "" } */

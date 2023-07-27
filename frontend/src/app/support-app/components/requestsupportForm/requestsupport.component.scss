@@ -42,6 +42,7 @@ textarea{
     text-align: center;
     padding: 5px;
     background-color: #FFEDDC;
+    cursor: pointer;
 }
 
 }
@@ -54,10 +55,6 @@ textarea{
         background-color: #9CC7C7;
         padding: 10px;
         height: 71vh;
-    }
-    
-    .formulario{
-       
     }
     
     input{
@@ -88,6 +85,7 @@ textarea{
         width:20%;
         text-align: center;
         padding: 5px;
+        cursor: pointer;
     }
 
     .ordenado{
@@ -106,7 +104,4 @@ textarea{
     textarea{
         background-color: #FFEDDC;
     }
-    
-    
-
 }

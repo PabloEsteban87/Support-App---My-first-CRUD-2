@@ -8,6 +8,6 @@
             <p *ngFor="let support of supports" class="list1"><strong>{{support.topic}}&nbsp;&nbsp;&nbsp;{{support.date | date: 'dd-MM-yyyy'}}</strong></p><br>
         </div>
         <div class="boton-soporte">
-            <button> <p (click)="AddSupport()">Agregar soporte</p></button>
+            <button (click)="AddSupport()"> Agregar soporte</button>
         </div>
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, NgForm, ReactiveFormsModule, FormGroup, FormControl, FormsModule, Form } from '@angular/forms';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-requestsupport',
@@ -10,7 +10,8 @@ import { FormBuilder, NgForm, ReactiveFormsModule, FormGroup, FormControl, Forms
 })
 export class RequestsupportComponent implements OnInit{
 
-  constructor( private http: HttpClient){}
+
+  constructor( private http: HttpClient, private router: Router){}
 
 
 AddSupportForm!: FormGroup; 
@@ -25,10 +26,12 @@ AddSupportForm!: FormGroup;
    });
   }
 
+  back(){
+    this.router.navigate(['']);
+  }
 
   
   onSubmitForm(): void {
-  /*   console.log(this.AddSupportForm.get('name1')?.value); */
     this.addSupport();
   }
 
@@ -36,11 +39,8 @@ AddSupportForm!: FormGroup;
     this.http.post<any[]>('http://localhost:8000/support', this.AddSupportForm.value)
     .subscribe(createSupport => 
       {
-          
-        console.log("Añadido con exito");
-        /* console.log(createSupport);
-          console.log(this.AddSupportForm.value);
-          console.log(createSupport); */
+          console.log("Añadido con exito");
+
       });
   }  
 
